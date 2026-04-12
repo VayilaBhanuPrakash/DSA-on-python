@@ -38,4 +38,7 @@ class Solution:
                         l.pop()
                         i+=1
         return l
+
+
+
         
