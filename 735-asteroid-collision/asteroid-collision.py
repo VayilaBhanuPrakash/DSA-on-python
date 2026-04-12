@@ -14,7 +14,7 @@ class Solution:
                 while i<n and len(l) and asteroids[i]<0 and l[-1]<0:
                     l.append(asteroids[i])
                     i+=1
-                if i<n and len(l) and asteroids[i]>0 and l[-1]<0:
+                while i<n and len(l) and asteroids[i]>0 and l[-1]<0:
                     """if asteroids[i]>-l[-1]:
                         pass
                         #l.append(asteroids[i])
