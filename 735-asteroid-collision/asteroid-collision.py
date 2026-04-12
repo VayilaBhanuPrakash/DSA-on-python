@@ -27,7 +27,7 @@ class Solution:
                         i+=1"""
                     l.append(asteroids[i])
                     i+=1
-                if i<n and  len(l) and asteroids[i]<0 and l[-1]>0:
+                while i<n and  len(l) and asteroids[i]<0 and l[-1]>0:
                     if -asteroids[i]>l[-1]:
                         l.pop()
                         #l.append(asteroids[i])
