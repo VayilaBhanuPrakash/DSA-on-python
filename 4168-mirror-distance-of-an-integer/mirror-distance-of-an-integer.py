@@ -7,5 +7,4 @@ class Solution:
             rev=rev*10+rem
             temp//=10
         return abs(rev-n)
-
         
