@@ -16,9 +16,6 @@ class Solution:
                 i+=1
             if flag==0:
                 return False
-            """while j<n and popped[j]==l[-1]:
-                l.pop()
-                j+=1"""
         return len(l)==0
 
             
