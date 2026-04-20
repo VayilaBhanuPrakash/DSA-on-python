@@ -9,7 +9,7 @@ class Solution:
                 if string*(len(str1)//i)==str1 and string*(len(str2)//i)==str2:
                     return string
         
-        return ""
+        #return ""
 
 
         
