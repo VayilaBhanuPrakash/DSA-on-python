@@ -3,8 +3,7 @@ class Solution:
         summ=sum(nums[:k])
         maxx=summ
         for i in range(k,len(nums)):
-            summ-=nums[i-k]
-            summ+=nums[i]
+            summ=summ-nums[i-k]+nums[i]
             maxx=max(maxx,summ)
         return maxx/k
         
