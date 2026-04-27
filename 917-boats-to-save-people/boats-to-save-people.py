@@ -7,7 +7,6 @@ class Solution:
         while i<=j:
             if people[i]+people[j]<=limit:
                 i+=1
-            print(people[i],people[j])
             count+=1
             j-=1
         return count
