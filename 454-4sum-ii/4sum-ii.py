@@ -12,7 +12,22 @@ class Solution:
                 if s2 in dictt:
                     count+=dictt[s2]
         return count
-            
+
+
+
+
+
+        """
+        count=0 
+        n=len(nums1) 
+        for i in range(n):
+            for j in range(n):
+                for k in range(n): 
+                    for l in range(n): 
+                        if nums1[i]+nums2[j]+nums3[k]+nums4[l]==0: 
+                            count+=1 
+        return count
+        """
                 
 
         
