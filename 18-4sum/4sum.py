@@ -8,12 +8,13 @@ class Solution:
                 k=j+1
                 l=n-1
                 while k<l:
-                    if nums[i]+nums[j]+nums[k]+nums[l]==target:
+                    total=nums[i]+nums[j]+nums[k]+nums[l]
+                    if total==target:
                         if [nums[i],nums[j],nums[k],nums[l]] not in res:
                             res.append([nums[i],nums[j],nums[k],nums[l]])
                         k+=1
                         l-=1
-                    elif nums[i]+nums[j]+nums[k]+nums[l]>target:
+                    elif total>target:
                         l-=1
                     else:
                         k+=1
