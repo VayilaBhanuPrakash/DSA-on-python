@@ -15,6 +15,6 @@ class Solution:
                 elif curr_sum>target:
                     right-=1
                 else:
-                    return curr_sum
+                    return curr_sum #exact match
         return closest
         
