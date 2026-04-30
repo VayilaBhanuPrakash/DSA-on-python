@@ -15,6 +15,6 @@ class Solution:
                 elif target1>target:
                     right-=1
                 else:
-                    return target1
+                    return target1 #exact match
         return closest
         
