@@ -8,4 +8,13 @@ class Solution:
             else:
                 sett.add(ele)
         return res
+        """res=[]
+        h={}
+        for ele in nums:
+            if ele in h:
+                res.append(ele)
+            else:
+                h[ele]=1
+        return res"""
+
         
