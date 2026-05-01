@@ -1,6 +1,6 @@
 class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
-        n=len(nums)
+        """n=len(nums)
         if n<3:
             return False
         Prefix=[0]*n
@@ -14,7 +14,7 @@ class Solution:
         for i in range(1,n-1):
             if Prefix[i-1]<nums[i] and Suffix[i+1]>nums[i]:
                 return True
-        return False
+        return False"""
         first=nums[0]
         second=float('inf')
         for i in range(1,len(nums)):
