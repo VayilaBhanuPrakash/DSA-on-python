@@ -1,6 +1,6 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        """dict_s={}
+        dict_s={}
         dict_t={}
         for i in range(len(s)):
             first=s[i]
@@ -15,8 +15,8 @@ class Solution:
                     return False
             else:
                 dict_t[second]=first
-        return True"""
-        h={}
+        return True
+        """h={}
         for i in range(len(s)):
             #first=s[i]
             #second=t[i]
@@ -26,6 +26,6 @@ class Solution:
                 return False
             else:
                 h[s[i]]=t[i]
-        return True
+        return True"""
 
             
