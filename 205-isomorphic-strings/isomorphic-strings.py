@@ -19,8 +19,8 @@ class Solution:
 
         h={}
         for i in range(len(s)):
-            first=s[i]
-            second=t[i]
+            #first=s[i]
+            #second=t[i]
             if s[i] in h.keys() and h[s[i]]!=t[i]:
                 return False
             elif s[i] not in h.keys() and t[i] in h.values():
