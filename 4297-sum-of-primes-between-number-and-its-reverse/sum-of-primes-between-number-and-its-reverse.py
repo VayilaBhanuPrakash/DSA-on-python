@@ -1,11 +1,13 @@
 class Solution:
     def sumOfPrimesInRange(self, n: int) -> int:
         def isprime(n):
-            if n==1:
+            if n<2:
                 return False
-            for j in range(2,n):
+            j=2
+            while j*j<=n:
                 if n%j==0:
                     return False
+                j+=1
             return True
         temp=n
         rev=0
