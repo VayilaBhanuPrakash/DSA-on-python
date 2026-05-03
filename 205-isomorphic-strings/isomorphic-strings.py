@@ -21,10 +21,10 @@ class Solution:
         for i in range(len(s)):
             first=s[i]
             second=t[i]
-            if first in h.keys() and h[first]!=second:
+            if s[i] in h.keys() and h[s[i]]!=t[i]:
                 return False
-            elif first not in h.keys() and second in h.values():
+            elif s[i] not in h.keys() and t[i] in h.values():
                 return False
             else:
-                h[first]=second
+                h[s[i]]=t[i]
         return True     
