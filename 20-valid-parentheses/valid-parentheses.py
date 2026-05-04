@@ -1,6 +1,30 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        res=[]
+        stack=[]
+        for ele in s:
+            if ele in "([{":
+                stack.append(ele)
+            else:
+                if ele==")" and (len(stack)==0 or stack.pop()!="("):
+                    return False
+                if ele=="]" and (len(stack)==0 or stack.pop()!="["):
+                    return False
+                if ele=="}" and (len(stack)==0 or stack.pop()!="{"):
+                    return False
+        return len(stack)==0
+
+
+
+
+
+
+
+
+
+
+
+
+        """res=[]
         h={')':'(',']':'[','}':'{'}
         for ele in s:
             if ele=='(' or ele=='[' or ele=='{':
@@ -10,6 +34,6 @@ class Solution:
                     res.pop()
                 else:
                     return False
-        return len(res)==0
+        return len(res)==0"""
 
         
