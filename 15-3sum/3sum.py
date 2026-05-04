@@ -22,6 +22,6 @@ class Solution:
                     k-=1
                 else:
                     j+=1
-        return list(res)
+        return res
 
         
