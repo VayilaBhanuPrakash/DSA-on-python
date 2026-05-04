@@ -1,18 +1,18 @@
 class Solution:
     def reverseVowels(self, s: str) -> str:
-        vowels={'a','e','i','o','u','A','E','I','O','U'}
         l=list(s)
-        i=0
-        j=len(s)-1
-        while i<j:
-            while i<j and l[i] not in vowels:
-                i+=1
-            while i<j and l[j] not in vowels:
-                j-=1
-            l[i],l[j]=l[j],l[i]
-            i+=1
-            j-=1
+        vowels={'a','e','i','o','u','A','E','I','O','U'}
+        a=0
+        b=len(s)-1
+        while a<b:
+            while a<b and l[a] not in vowels:
+                a+=1
+            while a<b and l[b] not in vowels:
+                b-=1
+            temp=l[a]
+            l[a]=l[b]
+            l[b]=temp
+            a+=1
+            b-=1
         return "".join(l)
-
-
         
