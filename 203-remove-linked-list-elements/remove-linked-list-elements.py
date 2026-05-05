@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
-        a=[] 
+        """a=[] 
         while head!=None:
             if head.val!=val:
                 a.append(head.val)
@@ -19,10 +19,10 @@ class Solution:
             else:
                 root.next=temp
                 root=root.next
-        return head
+        return head"""
 
 
-        """if head==None:
+        if head==None:
             return head
         curr=head
         while curr and curr.val==val:
@@ -33,6 +33,6 @@ class Solution:
                 curr.next=curr.next.next
             else:
                 curr=curr.next
-        return head"""
+        return head
 
         
