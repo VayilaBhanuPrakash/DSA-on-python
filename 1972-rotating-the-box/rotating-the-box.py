@@ -19,5 +19,4 @@ class Solution:
         for ele in res:
             l.append(ele[::-1])"""
         return [rows[::-1] for rows in res]
-        return res
         
