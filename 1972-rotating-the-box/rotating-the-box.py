@@ -8,10 +8,10 @@ class Solution:
                 if j<cols-1 and boxGrid[i][j]=="#" and res[j+1][i]==".":
                     res[j][i]=boxGrid[i][j]
                     res[j][i],res[j+1][i]=res[j+1][i],res[j][i]
-                    c=j+1
-                    while c<cols-1 and res[c][i]=="#" and res[c+1][i]==".":
-                        res[c][i],res[c+1][i]=res[c+1][i],res[c][i]
-                        c+=1
+                    j=j+1
+                    while j<cols-1 and res[j][i]=="#" and res[j+1][i]==".":
+                        res[j][i],res[j+1][i]=res[j+1][i],res[j][i]
+                        j+=1
 
                 else:
                     res[j][i]=boxGrid[i][j]
