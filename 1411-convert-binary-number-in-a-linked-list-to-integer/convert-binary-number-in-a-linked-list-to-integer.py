@@ -6,18 +6,17 @@
 class Solution:
     def getDecimalValue(self, head: Optional[ListNode]) -> int:
         res=0
-        l=[]
         curr=head
         i=0
         while head:
-            l.append(head.val)
             head=head.next
             i+=1
         i-=1
-        for ele in l:
-            if ele==1:
+        while curr:
+            if curr.val==1:
                 res+=2**i
             i-=1
+            curr=curr.next
         return res
         
         
