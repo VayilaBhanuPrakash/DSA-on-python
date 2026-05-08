@@ -3,6 +3,7 @@ class Solution:
         sum=0
         i=0
         j=0
+        maxx=0
         h={}
         while j<k:
             sum+=nums[j]
@@ -11,7 +12,6 @@ class Solution:
             else:
                 h[nums[j]]=1
             j+=1
-        maxx=0
         if len(h)==k:
             maxx=sum
         while i<len(nums)-k:
@@ -29,3 +29,8 @@ class Solution:
             i+=1
             j+=1
         return maxx
+
+
+        
+        
+        
