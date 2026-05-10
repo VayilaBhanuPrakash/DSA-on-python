@@ -10,4 +10,3 @@ class Solution:
                 res[i]=stack[-1]-i
             stack.append(i)
         return res
-        
