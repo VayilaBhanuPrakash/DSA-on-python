@@ -1,6 +1,11 @@
 class Solution:
     def separateDigits(self, nums: List[int]) -> List[int]:
         res=[]
+        for ele in nums:
+            for digits in str(ele):
+                res.append(int(digits))
+        return res
+        """res=[]
         for i in range(len(nums)-1,-1,-1):
             num=nums[i]
             while num>0:
@@ -15,5 +20,5 @@ class Solution:
             res[j]=temp
             i+=1
             j-=1
-        return res
+        return res"""
         
