@@ -15,8 +15,3 @@ class Solution:
                 res=res+min(leftmax[i-1],rightmax[i+1])-height[i]
         return res
         
-
-
-
-
-        
