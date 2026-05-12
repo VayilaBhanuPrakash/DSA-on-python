@@ -10,18 +10,4 @@ class Solution:
                 rem+=add
             rem=rem-tasks[i][0]
         return sum
-            
-
-
-        """minn=tasks[0][1]-tasks[0][0]
-        maxx=tasks[0][1]
-        sum=0
-        for ele in tasks:
-            sum+=ele[0]
-            minn=min(minn,ele[1]-ele[0])
-            maxx=max(maxx,ele[1])
-        if sum+minn<=maxx:
-            return maxx
-        return sum+minn"""
-        
         
