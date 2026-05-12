@@ -6,11 +6,9 @@ class Solution:
         rem=tasks[0][1]-tasks[0][0]
         for i in range(1,len(tasks)):
             if rem<tasks[i][1]:
-                print(rem,tasks[i][1])
                 add=tasks[i][1]-rem
                 rem+=add
                 sum+=add
-                print(sum)
             rem=rem-tasks[i][0]
         return sum
             
