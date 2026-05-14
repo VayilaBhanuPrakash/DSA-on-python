@@ -1,6 +1,14 @@
 class Solution:
     def isGood(self, nums: List[int]) -> bool:
-        h={}
+        nums.sort()
+        n=len(nums)
+        for i in range(1,n-1):
+            if i!=nums[i-1]:
+                return False
+        if nums[-1]!=n-1 or nums[-2]!=n-1:
+            return False
+        return True
+        """h={}
         n=len(nums)
         if n==1:
             return False
@@ -17,6 +25,5 @@ class Solution:
                     return False
         if n-1 in h and h[n-1]==2:
             return True
-        return False
-                
+        return False"""
         
