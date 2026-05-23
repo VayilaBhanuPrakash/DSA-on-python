@@ -14,17 +14,21 @@ class Solution:
         for ele in word2:
             if ele in h2:
                 h2[ele]+=1
-            elif ele not in h1:
-                return False
             else:
                 h2[ele]=1
         l1=[]
-        for values in h1.values():
-            l1.append(values)
+        l3=[]
+        for keys in h1:
+            l1.append(keys)
+            l3.append(h1[keys])
         l2=[]
-        for values in h2.values():
-            l2.append(values)
+        l4=[]
+        for keys in h2:
+            l2.append(keys)
+            l4.append(h2[keys])
         l1.sort()
         l2.sort()
-        return l1==l2
+        l3.sort()
+        l4.sort()
+        return l1==l2 and l3==l4
         
