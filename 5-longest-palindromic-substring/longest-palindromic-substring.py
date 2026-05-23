@@ -5,7 +5,11 @@ class Solution:
         for i in range(len(s)):
             start=i
             end=len(s)-1
+            if (end-start)<len(res):
+                continue
             while start<=end:
+                if (end-start)<len(res):
+                    break
                 if s[start]!=s[end]:
                     end-=1
                 else:
