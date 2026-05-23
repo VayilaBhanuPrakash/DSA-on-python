@@ -16,11 +16,11 @@ class Solution:
                 h2[ele]=1
         if len(h1)!=len(h2):
             return False
-        l=[]
+        l1=[]
         for values in h1.values():
-            l.append(values)
+            l1.append(values)
+        l2=[]
         for values in h2.values():
-            if values in l:
-                l.remove(values)
-        return len(l)==0
+            l2.append(values)
+        return sorted(l1)==sorted(l2)
         
