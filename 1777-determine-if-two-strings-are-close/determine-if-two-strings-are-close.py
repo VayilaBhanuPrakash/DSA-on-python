@@ -1,5 +1,9 @@
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:
+        n1=len(word1)
+        n2=len(word2)
+        if n1!=n2:
+            return False
         h1={}
         h2={}
         for ele in word1:
