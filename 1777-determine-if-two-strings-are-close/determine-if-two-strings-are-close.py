@@ -24,5 +24,7 @@ class Solution:
         l2=[]
         for values in h2.values():
             l2.append(values)
-        return sorted(l1)==sorted(l2)
+        l1.sort()
+        l2.sort()
+        return l1==l2
         
