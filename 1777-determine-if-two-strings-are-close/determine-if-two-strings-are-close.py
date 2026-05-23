@@ -14,8 +14,6 @@ class Solution:
                 return False
             else:
                 h2[ele]=1
-        if len(h1)!=len(h2):
-            return False
         l1=[]
         for values in h1.values():
             l1.append(values)
