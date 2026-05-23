@@ -6,7 +6,7 @@ class Solution:
             start=i
             end=len(s)-1
             if (end-start)<len(res):
-                continue
+                break
             while start<=end:
                 if (end-start)<len(res):
                     break
