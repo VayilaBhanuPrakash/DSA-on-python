@@ -26,4 +26,6 @@ class Solution:
         for ele in spells:
             res.append(h[ele])
         return res
+
+
         
