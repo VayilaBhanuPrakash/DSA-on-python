@@ -23,7 +23,5 @@ class Solution:
         res=max(end-start,res)
         if flag==0 and count==k:
             return k
-        if res==0 and count<=k:
-            return len(nums)
         return res
         
