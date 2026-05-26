@@ -11,8 +11,10 @@ class Solution:
                 else:
                     h[ele]=1
             else:
-                if ele.lower() in h and h[ele.lower()]<=2:
+                if ele.lower() in h and h[ele.lower()]==1:
                     h[ele.lower()]=2
+                if ele.lower() in h and h[ele.lower()]==2:
+                    pass
                 else:
                     h[ele.lower()]=3
         for values in h.values():
