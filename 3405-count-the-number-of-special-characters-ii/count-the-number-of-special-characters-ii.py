@@ -3,6 +3,7 @@ class Solution:
         h={}
         res=0
         for ele in word:
+            ch=ele.lower()
             if ele.islower():
                 if ele in h and h[ele]==2:
                     h[ele]=3
@@ -11,12 +12,12 @@ class Solution:
                 else:
                     h[ele]=1
             else:
-                if ele.lower() in h and h[ele.lower()]==1:
-                    h[ele.lower()]=2
-                if ele.lower() in h and h[ele.lower()]==2:
+                if ch in h and h[ch]==1:
+                    h[ch]=2
+                elif ch in h and h[ch]==2:
                     pass
                 else:
-                    h[ele.lower()]=3
+                    h[ch]=3
         for values in h.values():
             if values == 2:
                 res+=1
