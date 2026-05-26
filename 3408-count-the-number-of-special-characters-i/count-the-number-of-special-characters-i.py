@@ -1,21 +1,12 @@
 class Solution:
     def numberOfSpecialChars(self, word: str) -> int:
         word=set(word)
-        h={}
-        for ele in word:
-            if ele.islower():
-                if ele.upper() in h:
-                    h[ele]=2
-                else:
-                    h[ele]=1
-            else:
-                if ele.lower() in h:
-                    h[ele]=2
-                else:
-                    h[ele]=1
+        s=set()
         res=0
-        for values in h.values():
-            if values==2:
+        for ele in word:
+            if ele.lower() in s:
                 res+=1
+            else:
+                s.add(ele.lower())
         return res
         
