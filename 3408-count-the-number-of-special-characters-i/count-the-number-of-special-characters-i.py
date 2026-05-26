@@ -14,8 +14,8 @@ class Solution:
                 else:
                     h[ele]=1
         res=0
-        for keys in h:
-            if h[keys]==2:
+        for values in h.values():
+            if values==2:
                 res+=1
         return res
         
