@@ -22,26 +22,10 @@ class Solution:
             head2=head2.next
         carry=0
         res=None
-        while stack1 and stack2:
-            num=stack1.pop()+stack2.pop()+carry
+        while stack1 or stack2 or carry:
+            num=(stack1.pop() if stack1 else 0)+(stack2.pop() if stack2 else 0)+carry
             carry=num//10
             add=ListNode(num%10)
-            add.next=res
-            res=add
-        while stack1:
-            num=stack1.pop()+carry
-            carry=num//10
-            add=ListNode(num%10)
-            add.next=res
-            res=add
-        while stack2:
-            num=stack2.pop()+carry
-            carry=num//10
-            add=ListNode(num%10)
-            add.next=res
-            res=add
-        if carry:
-            add=ListNode(carry)
             add.next=res
             res=add
         return res
