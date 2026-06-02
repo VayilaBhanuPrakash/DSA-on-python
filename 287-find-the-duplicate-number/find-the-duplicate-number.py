@@ -1,14 +1,14 @@
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        i=0
-        n=len(nums)
-        while i<n:
-            correct=nums[i]-1
-            if nums[i]!=nums[correct]:
-                nums[i],nums[correct]=nums[correct],nums[i]
+        h={}
+        for ele in nums:
+            if ele in h:
+                h[ele]+=1
             else:
-                i+=1
-        for i in range(n):
-            if nums[i]!=i+1:
-                return nums[i]
+                h[ele]=1
+        for ele in h:
+            if h[ele]>=2:
+                return ele
+            
+        
         
