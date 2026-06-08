@@ -2,17 +2,15 @@ class Solution:
     def pivotArray(self, nums: List[int], pivot: int) -> List[int]:
         small = []
         large = []
-        p_count = 0
+        equal = []
         for i in range(len(nums)):
             if nums[i] > pivot:
                 large.append(nums[i])
             elif nums[i] < pivot:
                 small.append(nums[i])
             else:
-                p_count += 1
-        for i in range(p_count):
-            small.append(pivot)
-        for ele in large:
-            small.append(ele)
+                equal.append(nums[i])
+        small.extend(equal)
+        small.extend(large)
         return small
         
