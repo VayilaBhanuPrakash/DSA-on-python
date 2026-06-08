@@ -10,7 +10,6 @@ class Solution:
                 small.append(nums[i])
             else:
                 equal.append(nums[i])
-        small.extend(equal)
-        small.extend(large)
-        return small
+                
+        return small + equal + large
         
