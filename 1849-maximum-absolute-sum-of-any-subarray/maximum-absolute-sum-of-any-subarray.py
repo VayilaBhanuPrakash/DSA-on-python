@@ -1,19 +1,19 @@
 class Solution:
     def maxAbsoluteSum(self, nums: List[int]) -> int:
-        psum = float('-inf')
-        pmaxsum = float('-inf')
+        positive_sum = float('-inf')
+        positive_maxsum = float('-inf')
         for ele in nums:
-            psum = max(psum + ele , ele)
-            pmaxsum = max(psum,pmaxsum)
+            positive_sum = max(positive_sum + ele , ele)
+            positive_maxsum = max(positive_sum,positive_maxsum)
                 
 
-        nsum = float('inf')
-        nminsum = float('inf')
+        negative_sum = float('inf')
+        negetive_maxsum = float('inf')
         for ele in nums:
-            nsum = min(nsum + ele , ele)
-            nminsum = min(nsum,nminsum)
+            negative_sum = min(negative_sum + ele , ele)
+            negetive_maxsum = min(negative_sum,negetive_maxsum)
 
         
-        return max(pmaxsum,-nminsum)
+        return max(positive_maxsum,-negetive_maxsum)
 
         
