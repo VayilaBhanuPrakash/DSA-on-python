@@ -13,7 +13,6 @@ class Solution:
                 arr[j] = "mark"
                 j -= 1
         res = []
-        print(arr)
         for ele in arr:
             if ele != "mark":
                 res.append(ele)
