@@ -11,6 +11,7 @@ class Solution:
                 else:
                     res = res + romans[i]
                     num = num - values[i]
+                    n = i
                     break
         return res
                 
