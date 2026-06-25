@@ -20,4 +20,9 @@ class Solution:
                     minn = min(minn,l[i][keys])
             res.extend([keys]*minn)
         return res
+                    
+                
+                
+
         
+
