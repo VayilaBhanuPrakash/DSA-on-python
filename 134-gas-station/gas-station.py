@@ -1,8 +1,8 @@
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
-        i = 0
         if len(gas) == 1 and gas[0] == cost[0]:
             return 0
+        i = 0
         while i < len(gas):
             if gas[i] <= cost[i]:
                 i += 1
@@ -19,4 +19,6 @@ class Solution:
                 else:
                     return i
         return -1
+
+
         
