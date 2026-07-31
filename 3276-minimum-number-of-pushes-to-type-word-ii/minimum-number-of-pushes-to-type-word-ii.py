@@ -1,14 +1,6 @@
 class Solution:
     def minimumPushes(self, word: str) -> int:
-        h = {}
-        for ele in word:
-            if ele in h:
-                h[ele] += 1
-            else:
-                h[ele] = 1
-        l = []
-        for values in h.values():
-            l.append(values)
+        l = [word.count(chr(97 + i)) for i in range(26)]
         l.sort()
         res = 0
         for i in range(-1,-(len(l)+1),-1):
