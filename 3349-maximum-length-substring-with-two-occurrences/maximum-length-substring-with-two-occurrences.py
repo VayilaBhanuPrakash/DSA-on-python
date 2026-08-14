@@ -13,7 +13,6 @@ class Solution:
                     while h[s[j]] > 2:
                         h[s[i]] -= 1
                         i += 1
-            print(j-i+1)
             maxx = max(maxx,j-i+1)
             j += 1
         return maxx
