@@ -8,7 +8,13 @@ class Solution:
                 h[ele] += 1
         if k == len(nums):
             return max(nums)
-        if k > 1:
+        if k == 1:
+            maxx = -1
+            for key in h:
+                if h[key] == 1:
+                    maxx = max(maxx,key)
+            return maxx
+        else:
             if h[nums[0]] == 1 and h[nums[-1]] == 1:
                 if nums[0] > nums[-1]:
                     return nums[0]
@@ -20,9 +26,6 @@ class Solution:
                 return nums[-1]
             else:
                 return -1
-        else:
-            maxx = -1
-            for key in h:
-                if h[key] == 1:
-                    maxx = max(maxx,key)
-            return maxx
+
+        
+        
