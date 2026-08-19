@@ -22,4 +22,6 @@ class Solution:
         if root == None:
             return TreeNode(val)
         return insert(root,val)
+                
+            
         
