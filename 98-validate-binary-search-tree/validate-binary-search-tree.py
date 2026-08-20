@@ -13,7 +13,7 @@ class Solution:
             nonlocal val1
             if root == None:
                 return True
-            if not inorder(root.left):
+            if inorder(root.left) == False:
                 return False
             if val1 >= root.val:
                 return False
