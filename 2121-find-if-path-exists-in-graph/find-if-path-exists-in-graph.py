@@ -10,8 +10,9 @@ class Solution:
         visited = [False] * n
         next = []
         next.append(source)
+
         visited[source] = True
- 
+
         i  = 0
 
         while i <= len(next) -1:
@@ -20,8 +21,8 @@ class Solution:
                 return True
             for j in graph[curr]:
                 if visited[j] == False:
-                    next.append(j)
                     visited[j] = True
+                    next.append(j)
             i += 1
         return False
         
