@@ -8,8 +8,8 @@ class Solution:
                 rem = val % 2
                 b = str(rem) + b
                 val = val //2
-            while len(b) < 8:
-                b = str('0') + b
+            
+            b = str('0'*(8 - len(b))) + b
             bs = bs + b
 
         i = 0
