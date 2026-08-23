@@ -12,6 +12,8 @@ class Solution:
             b = str('0'*(8 - len(b))) + b
             bs = bs + b
 
+        return bs == bs[::-1]
+
         i = 0
         j = len(bs) - 1
         while i <= j:
