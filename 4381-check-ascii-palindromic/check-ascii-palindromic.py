@@ -2,15 +2,9 @@ class Solution:
     def isPalindromic(self, s: str) -> bool:
         bs = ""
         for ele in s:
-            val = ord(ele)
-            b = ""
-            while val != 0:
-                rem = val % 2
-                b = str(rem) + b
-                val = val //2
-            
-            b = str('0'*(8 - len(b))) + b
-            bs = bs + b
+            b = bin(ord(ele))
+            bb = (8 - (len(b) - 2))*"0" + b[2:]
+            bs = bs + bb
 
         return bs == bs[::-1]
 
