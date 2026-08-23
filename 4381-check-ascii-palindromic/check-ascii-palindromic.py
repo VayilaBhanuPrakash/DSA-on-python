@@ -1,10 +1,9 @@
 class Solution:
     def isPalindromic(self, s: str) -> bool:
         bs = ""
-        for ele in s:
-            b = bin(ord(ele))
-            bb = (8 - (len(b) - 2))*"0" + b[2:]
-            bs = bs + bb
+        for ch in s:
+            b = format(ord(ch),'08b')
+            bs = bs + b
 
         return bs == bs[::-1]
 
