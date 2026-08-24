@@ -12,8 +12,8 @@ class Solution:
                 if j not in visit:
                     next.append(j)
             i += 1
-        for i in range(1,len(rooms)):
-            if i not in visit:
+        for key in range(1,len(rooms)):
+            if key not in visit:
                 return False
         return True
         
