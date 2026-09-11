@@ -1,6 +1,6 @@
 class Solution:
     def totalNumbers(self, digits: List[int]) -> int:
-        res = []
+        res = set()
 
         for i in range(len(digits)):
             if digits[i] == 0:
@@ -11,7 +11,7 @@ class Solution:
                 for k in range(len(digits)):
                     if k == i or k == j:
                         continue
-                    if digits[k] % 2 == 0 and [digits[i],digits[j],digits[k]] not in res:
-                        res.append([digits[i],digits[j],digits[k]])
+                    if digits[k] % 2 == 0:
+                        res.add(digits[i]*100 + digits[j]*10 + digits[k])
         return len(res)
         
