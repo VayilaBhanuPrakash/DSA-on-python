@@ -17,4 +17,5 @@ class Solution:
             leaf(node.right)
         leaf(root)
         return res
+
         
