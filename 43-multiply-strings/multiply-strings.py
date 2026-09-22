@@ -17,7 +17,6 @@ class Solution:
 
                 res[last_first] = t % 10
                 res[last_second] += t // 10
-        print(res)
         result = ""
         for ele in res:
             if ele == 0 and result == "":
