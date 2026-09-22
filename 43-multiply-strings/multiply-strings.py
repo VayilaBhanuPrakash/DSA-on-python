@@ -23,6 +23,5 @@ class Solution:
                 continue
             result = result + chr(ele + 48)
         return result
-
-
+        
         
