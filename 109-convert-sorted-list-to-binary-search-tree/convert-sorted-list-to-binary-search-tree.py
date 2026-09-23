@@ -15,7 +15,6 @@ class Solution:
             return None
         if head.next == None:
             return TreeNode(head.val)
-        
 
         slow = head
         fast = head
@@ -25,13 +24,13 @@ class Solution:
             slow_prev = slow
             slow = slow.next
             fast = fast.next.next
-
+    
         root = TreeNode(slow.val)
-
-        slow_prev.next = None
+        slow_prev.next =None
 
         root.left = self.sortedListToBST(head)
         root.right = self.sortedListToBST(slow.next)
 
         return root
+
         
