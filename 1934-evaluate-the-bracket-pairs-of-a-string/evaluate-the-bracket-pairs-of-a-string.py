@@ -3,8 +3,8 @@ class Solution:
         res = ""
         stack = []
         h = {}
-        for i in range(len(knowledge)):
-            h[knowledge[i][0]] = knowledge[i][1]
+        for key,val in knowledge:
+            h[key] = val
         for ele in s:
             if ele == ")":
                 key = "".join(stack[1:])
