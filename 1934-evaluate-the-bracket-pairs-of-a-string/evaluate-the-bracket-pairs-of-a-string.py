@@ -8,10 +8,9 @@ class Solution:
         for ele in s:
             if ele == ")":
                 key = "".join(stack[1:])
-                if key in h:
-                    res = res + h[key]
-                else:
-                    res = res + "?"
+
+                res = res + h.get(key,"?")
+    
                 stack = []
             elif ele.islower() and not stack:
                 res = res + ele
