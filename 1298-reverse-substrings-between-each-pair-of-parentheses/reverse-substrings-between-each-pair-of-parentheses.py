@@ -6,9 +6,9 @@ class Solution:
             if s[i] == ")":
                 last = []
                 while stack:
-                    if stack and stack[-1] != "(":
+                    if stack[-1] != "(":
                         last.append(stack.pop())
-                    elif stack and stack[-1] == "(":
+                    elif stack[-1] == "(":
                         stack.pop()
                         stack.extend(last)
                         break
@@ -23,4 +23,5 @@ class Solution:
             else:
                 stack.append(s[i])
         return res
+            
         
