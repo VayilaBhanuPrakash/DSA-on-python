@@ -3,14 +3,22 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        l=[rows[:] for rows in matrix]
-        n=len(l)
-        m=len(l[0])
+        n=len(matrix)
+        m=len(matrix[0])
+        rows = set()
+        cols = set()
+
         for i in range(n):
             for j in range(m):
-                if l[i][j]==0:
-                    for cols in range(m):
-                        matrix[i][cols]=0
-                    for rows in range(n):
-                        matrix[rows][j]=0
+                if matrix[i][j]==0:
+                    rows.add(i)
+                    cols.add(j)
+        for row in rows:
+            for j in range(m):
+                matrix[row][j] = 0
+        for col in cols:
+            for i in range(n):
+                matrix[i][col] = 0
+
+                    
         
