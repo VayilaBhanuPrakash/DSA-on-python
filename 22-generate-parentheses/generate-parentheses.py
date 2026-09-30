@@ -13,9 +13,10 @@ class Solution:
                 if count == 0:
                     res.append(par)
                 return
-
-            dfs(par+'(',count+1)
-            dfs(par+')',count-1)
+            if count < n:
+                dfs(par+'(',count+1)
+            if count > 0:
+                dfs(par+')',count-1)
         dfs('(',1)
         return res
         
