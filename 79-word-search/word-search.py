@@ -1,23 +1,26 @@
 class Solution:
-    def exist(self, board: list[list[str]], word: str) -> bool:
-        n = len(board)
-        m = len(board[0])
+    def exist(self, board: List[List[str]], word: str) -> bool:
 
-        def dfs(i,j,k=0):
-            if k == len(word):
-                return True
-            if not (i>=0 and j>=0 and i<n and j<m):
+        def dfs(i,j,k):
+            if (i < 0 or j < 0 or i >= row or j >= col):
                 return False
             if board[i][j] != word[k]:
                 return False
-            board[i][j] = '!'
+            if board[i][j] == word[k] and k == len(word) - 1:
+                return True
+            board[i][j] = "!"
 
             if dfs(i+1,j,k+1) or dfs(i-1,j,k+1) or dfs(i,j+1,k+1) or dfs(i,j-1,k+1):
                 return True
+
             board[i][j] = word[k]
-        for r in range(len(board)):
-            for c in range(len(board[0])):
-                if board[r][c] == word[0]:
-                    if dfs(r,c):
-                        return True
+
+        row=len(board)
+        col=len(board[0])
+        for rows in range(row):
+            for cols in range(col):
+                if board[rows][cols]==word[0] and dfs(rows,cols,0):
+                    return True
         return False
+                    
+        
