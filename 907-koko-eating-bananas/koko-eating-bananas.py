@@ -20,3 +20,4 @@ class Solution:
             else:
                 j = mid - 1
         return i
+        
