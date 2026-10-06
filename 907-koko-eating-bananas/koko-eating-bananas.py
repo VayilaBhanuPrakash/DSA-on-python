@@ -3,12 +3,6 @@ class Solution:
         i = 0
         j = max(piles)
         piles.sort()
-        if len(piles) == 1:
-            if piles[0] % h == 0:
-                return piles[i] // h
-            else:
-                return piles[0] // h + 1
-            return piles[0] // h + 1
         while i <= j:
             mid = i + (j-i) // 2
             if mid == 0:
