@@ -1,20 +1,11 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        res=[]
+        h={}
         for i in range(len(nums)):
-            for j in range(len(nums)):
-                for k in range(j+1,len(nums)):
-                    if nums[j]+nums[k]==target:
-                        res=[j,k]
-            return res
-        """h={}
-        i=0
-        for ele in nums:
-            if target-ele in h:
-                first=h[target-ele]
-                second=i
-                return first,second
-            else:
-                h[ele]=i
-            i+=1"""
-        
+            h[nums[i]] = i
+        for i in range(len(nums)):
+            if target - nums[i] in h and h[target - nums[i]] != i:
+                return [h[target - nums[i]],i]
+
+            
+            
