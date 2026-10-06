@@ -6,6 +6,5 @@ class Solution:
         for i in range(len(nums)):
             if target - nums[i] in h and h[target - nums[i]] != i:
                 return [h[target - nums[i]],i]
-
-            
-            
+        
+        
