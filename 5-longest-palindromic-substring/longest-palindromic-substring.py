@@ -26,6 +26,4 @@ class Solution:
                 first -= 1
                 last += 1
         return s[start : end + 1]
-
-
         
