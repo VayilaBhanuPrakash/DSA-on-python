@@ -4,13 +4,13 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def reorderList(self, head: Optional[ListNode]) -> None:
+    def reorderList(self, head: ListNode | None) -> None:
         """
         Do not return anything, modify head in-place instead.
         """
         l = []
         temp = head
-        while temp != None:
+        while temp:
             l.append(temp)
             temp = temp.next
         temp = head
@@ -21,8 +21,5 @@ class Solution:
             temp.next = after
             temp = temp.next
         temp.next = None
-        
-        
-
-
+    
         
