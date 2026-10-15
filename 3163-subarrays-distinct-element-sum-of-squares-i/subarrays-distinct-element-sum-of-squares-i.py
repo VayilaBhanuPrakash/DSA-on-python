@@ -1,6 +1,6 @@
 class Solution:
     def sumCounts(self, nums: List[int]) -> int:
-        n = len(nums)
+        n = len(nums)   
         res = 0
         for i in range(n):
             s = set()
@@ -8,4 +8,5 @@ class Solution:
                 s.add(nums[j])
                 res += len(s)**2
         return res
+                
         
