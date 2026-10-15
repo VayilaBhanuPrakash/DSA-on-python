@@ -6,8 +6,7 @@ class Solution:
             if nums[i-1] < nums[i]:
                 res += nums[i]
             else:
+                ans = max(ans,res)
                 res = nums[i]
-            ans = max(ans,res)
-        return ans
-            
+        return max(ans,res)
         
