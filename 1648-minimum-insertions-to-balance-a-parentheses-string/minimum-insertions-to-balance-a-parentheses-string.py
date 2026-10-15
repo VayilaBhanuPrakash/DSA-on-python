@@ -16,9 +16,7 @@ class Solution:
             elif ele == ")" and not stack:
                 res += 2
         return res + len(stack)*2
-
-
-        
                 
 
+        
         
