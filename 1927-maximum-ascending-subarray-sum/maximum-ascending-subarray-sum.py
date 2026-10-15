@@ -9,4 +9,5 @@ class Solution:
                 ans = max(ans,res)
                 res = nums[i]
         return max(ans,res)
+            
         
