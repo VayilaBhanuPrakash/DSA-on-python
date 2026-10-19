@@ -7,8 +7,5 @@ class Solution:
                 small += 1
             elif ele == target:
                 equal += 1
-        res = []
-        for i in range(small,small + equal):
-            res.append(i)
-        return res
+        return [i for i in range(small,small+equal)]
         
