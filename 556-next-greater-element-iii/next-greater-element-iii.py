@@ -19,12 +19,12 @@ class Solution:
             return l[1]  * 10 + l[0]
         
         i = n - 1
-        li = [l[i]]
+        list = [l[i]]
         i -= 1
         while i >= 0:
-            if l[i] < max(li):
+            if l[i] < max(list):
                 break
-            li.append(l[i])
+            list.append(l[i])
             i -= 1
         if i < 0:
             return -1
@@ -32,9 +32,10 @@ class Solution:
         res = []
         for j in range(i):
             res.append(l[j])
+            
+        val = l[i]
         temp = l[i+1:]
         temp.sort()
-        val = l[i]
         i = 0
         for i in range(len(temp)):
             if temp[i] > val:
