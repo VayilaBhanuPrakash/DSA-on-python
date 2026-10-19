@@ -1,9 +1,14 @@
 class Solution:
     def targetIndices(self, nums: list[int], target: int) -> list[int]:
-        nums.sort()
+        equal = 0
+        small = 0
+        for ele in nums:
+            if ele < target:
+                small += 1
+            elif ele == target:
+                equal += 1
         res = []
-        for i in range(len(nums)):
-            if nums[i] == target:
-                res.append(i)
+        for i in range(small,small + equal):
+            res.append(i)
         return res
         
