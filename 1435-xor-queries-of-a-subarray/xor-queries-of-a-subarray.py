@@ -5,11 +5,12 @@ class Solution:
         for i in range(1,len(arr)):
             prefix_xor[i] = prefix_xor[i - 1] ^ arr[i]
 
-        res = [0 for _ in queries]  
-        for i in range(len(queries)):
-            if queries[i][0] == 0:
-                res[i] = prefix_xor[queries[i][1]]
+        res = []  
+        for left,right in queries:
+            if left == 0:
+                res.append(prefix_xor[right])
             else:
-                res[i] = prefix_xor[queries[i][1]] ^ prefix_xor[queries[i][0] - 1] 
-                
+                res.append(prefix_xor[right] ^ prefix_xor[left - 1])
+
         return res
+        
