@@ -3,7 +3,7 @@ class Solution:
         if x < 2:
             return x
         left = 0
-        right = x + 1
+        right = x
         while left <= right:
             mid = (left + right)//2
             val1 = mid * mid
