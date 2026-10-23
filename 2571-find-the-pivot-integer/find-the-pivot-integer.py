@@ -1,11 +1,23 @@
 class Solution:
     def pivotInteger(self, n: int) -> int:
-        summ=(n*(n+1))/2
-        first_sum=0
-        for i in range(1,n+1):
-            first_sum+=i
-            if first_sum==summ:
-                return i
-            summ-=i
+        i = 1
+        j = n
+        start = 0
+        end = 0
+        while i < j:
+            if start == end:
+                start += i
+                end += j
+                i += 1
+                j -= 1
+            elif start < end:
+                start += i
+                i += 1
+            else:
+                end += j
+                j -= 1
+        if start == end:
+            return i
         return -1
+
         
