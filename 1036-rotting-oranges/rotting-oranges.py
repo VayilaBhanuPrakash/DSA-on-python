@@ -8,7 +8,6 @@ class Solution:
             if flag == 0:
                 break
             flag = 0
-            time += 1
             for i in range(rows):
                 for j in range(cols):
                     if grid[i][j] == 2:
@@ -25,11 +24,13 @@ class Solution:
                     if grid[i][j] == 3:
                         grid[i][j] = 2
                         flag = 1
+            if flag == 1:
+                time += 1
         
         for i in range(rows):
             for j in range(cols):
                 if grid[i][j] == 1:
                     return -1
                     
-        return time - 1
+        return time
         
