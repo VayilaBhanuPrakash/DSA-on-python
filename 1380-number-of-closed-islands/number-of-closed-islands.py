@@ -13,6 +13,7 @@ class Solution:
             down = dfs(row - 1, col)
             right = dfs(row, col + 1)
             left = dfs(row, col - 1)
+            
             return up and down and right and left
 
         count = 0
