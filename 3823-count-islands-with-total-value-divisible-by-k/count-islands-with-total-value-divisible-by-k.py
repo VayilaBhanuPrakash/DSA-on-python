@@ -25,4 +25,6 @@ class Solution:
                     if dfs(i,j) % k == 0:
                         res += 1
         return res
+
+
         
