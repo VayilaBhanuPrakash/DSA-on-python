@@ -29,4 +29,8 @@ class Solution:
             res += 1
 
         return -1 if fresh else res
+            
+
+  
+        
         
