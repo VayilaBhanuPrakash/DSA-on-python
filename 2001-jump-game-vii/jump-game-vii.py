@@ -9,7 +9,7 @@ class Solution:
 
         while next:
             jump = next.pop(0)
-            start = max(jump + minJump,farthest)
+            start = max(jump + minJump,farthest + 1)
             end = min(jump + maxJump,n - 1)
             for i in range(start, end + 1):
                 if s[i] == '0':
