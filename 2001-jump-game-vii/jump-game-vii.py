@@ -6,9 +6,10 @@ class Solution:
         next = [0]
         farthest = 0
         n = len(s)
-
-        while next:
-            jump = next.pop(0)
+        index = 0
+        while index < len(next):
+            jump = next[index]
+            index += 1
             start = max(jump + minJump,farthest + 1)
             end = min(jump + maxJump,n - 1)
             for i in range(start, end + 1):
