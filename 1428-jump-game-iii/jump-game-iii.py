@@ -1,15 +1,16 @@
 class Solution:
     def canReach(self, arr: list[int], start: int) -> bool:
-        visit = set()
         next = [start]
-        while next:
-            if next[0] in visit:
-                next.pop(0)
-                continue
-            visit.add(next[0])
-            index = next.pop(0)
+        visit = set()
+        pointer = 0
+        while pointer < len(next):
+            index = next[pointer]
+            pointer += 1
             if arr[index] == 0:
                 return True
+            if index in visit:
+                continue
+            visit.add(index)
             left = index - arr[index]
             right = index + arr[index]
             if left >= 0:
