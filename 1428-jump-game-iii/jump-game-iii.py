@@ -19,6 +19,4 @@ class Solution:
                 next.append(right)
         return False
 
-
-
         
