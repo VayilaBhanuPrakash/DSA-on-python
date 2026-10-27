@@ -17,7 +17,7 @@ class Solution:
                     next.append(i)
                     if i == n - 1:
                         return True
-            farthest = max(farthest,end)
+            farthest = end
         return False
 
         
