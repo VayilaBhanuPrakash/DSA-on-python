@@ -1,6 +1,7 @@
 class Solution:
     def minCost(self, grid: list[list[int]]) -> int:
         rows = len(grid)
+        rows = len(grid)
         cols = len(grid[0])
         dp = [[set() for _ in range(cols)]  for _ in range(rows)]
         dp[0][0].add(grid[0][0])
