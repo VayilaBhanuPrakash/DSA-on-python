@@ -1,5 +1,4 @@
 class StockSpanner:
-
     def __init__(self):
         self.ss = []
         self.index = 0
@@ -16,6 +15,7 @@ class StockSpanner:
         self.index += 1
 
         return span
+
 
 
 # Your StockSpanner object will be instantiated and called as such:
