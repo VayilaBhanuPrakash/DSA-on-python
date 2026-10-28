@@ -9,14 +9,13 @@ class StockSpanner:
         while self.ss and self.ss[-1][0] <= price:
             self.ss.pop()
         if not self.ss:
-            self.ss.append([price,self.index])
-            self.index += 1
-            return self.index
+            span = self.index + 1
+        else:
+            span = self.index - self.ss[-1][-1]
         self.ss.append([price,self.index])
         self.index += 1
 
-        return self.index - self.ss[-2][-1] - 1
-        
+        return span
 
 
 # Your StockSpanner object will be instantiated and called as such:
