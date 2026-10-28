@@ -6,8 +6,6 @@ class Solution:
         dp[0][0].add(grid[0][0])
         for i in range(rows):
             for j in range(cols):
-                if i == 0 and j == 0:
-                    continue
                 if i > 0:
                     for values in dp[i-1][j]:
                         dp[i][j].add(values ^ grid[i][j])
