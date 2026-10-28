@@ -15,7 +15,7 @@ class StockSpanner:
         self.ss.append([price,self.index])
         self.index += 1
 
-        return self.index - self.ss[-2][-1] -1
+        return self.index - self.ss[-2][-1] - 1
         
 
 
