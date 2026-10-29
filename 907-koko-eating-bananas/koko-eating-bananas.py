@@ -1,6 +1,5 @@
 class Solution:
     def minEatingSpeed(self, piles: list[int], h: int) -> int:
-
         def canEat(mid,h):
             hours = 0
             for ele in piles:
@@ -22,3 +21,4 @@ class Solution:
             else:
                 i = mid + 1
         return i
+        
