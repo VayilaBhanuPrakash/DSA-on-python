@@ -14,16 +14,13 @@ class Solution:
                 return False
             return True
 
-        i = 0
+        i = 1
         j = max(piles)
-        while i < j:
+        while i <= j:
             mid = (i + j) // 2
-            if mid == 0:
-                i = 1
-                continue
             
             if eat(mid,h):
-                j = mid
+                j = mid - 1
             else:
                 i = mid + 1
         return i
