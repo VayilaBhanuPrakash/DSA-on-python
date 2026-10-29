@@ -1,8 +1,7 @@
 class Solution:
     def minEatingSpeed(self, piles: list[int], h: int) -> int:
-        piles.sort()
         i = 0
-        j = piles[-1]
+        j = max(piles)
         n = len(piles)
 
         while i <= j:
