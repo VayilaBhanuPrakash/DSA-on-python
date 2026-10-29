@@ -1,9 +1,7 @@
 class Solution:
     def minEatingSpeed(self, piles: list[int], h: int) -> int:
-        i = 0
-        j = max(piles)
-        n = len(piles)
-        def eat(mid,h):
+
+        def canEat(mid,h):
             hours = 0
             for ele in piles:
                 if ele % mid == 0:
@@ -19,7 +17,7 @@ class Solution:
         while i <= j:
             mid = (i + j) // 2
             
-            if eat(mid,h):
+            if canEat(mid,h):
                 j = mid - 1
             else:
                 i = mid + 1
