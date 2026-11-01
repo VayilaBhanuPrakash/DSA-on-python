@@ -1,8 +1,7 @@
 class Solution:
     def minMoves(self, nums: list[int]) -> int:
         x = min(nums)
-        count = 0
-        for ele in nums:
-            count = count + (ele - x)
-        return count
+        summ = sum(nums)
+        n = len(nums)
+        return summ - x * n
         
