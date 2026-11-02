@@ -7,3 +7,4 @@ class Solution:
             res = res + abs(ele - middle)
         return res
         
+        
