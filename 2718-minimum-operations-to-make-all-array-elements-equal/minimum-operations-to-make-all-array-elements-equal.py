@@ -1,26 +1,26 @@
 class Solution:
     def minOperations(self, nums: List[int], queries: List[int]) -> List[int]:
-        ans = []
         nums.sort()
-        prefix_sum = [0]
-        for i in range(len(nums)):
-            prefix_sum.append(prefix_sum[-1] + nums[i])
+        n = len(nums)
+        prefix_sum = [0] * (n + 1)
+        for i in range(n):
+            prefix_sum[i + 1] = prefix_sum[i] + nums[i]
         
         ans = []
-        n = len(nums)
         for num in queries:
             i = 0
-            j = n
-            while i < j:
+            j = n - 1
+            while i <= j:
                 mid = (i + j) // 2
-                if nums[mid] < num:
+                if nums[mid] <= num:
                     i = mid + 1
                 else:
-                    j = mid
-            left_cost = num * i - prefix_sum[i]
-            right_cost = (prefix_sum[n] - prefix_sum[i]) - num * (n - i)
-            ans.append(left_cost + right_cost)
+                    j = mid - 1
+            left =  i * num - prefix_sum[i]
+            right = prefix_sum[n] - prefix_sum[i] - (n - i) * num
+            ans.append(left + right)
         return ans
+
             
         
             
