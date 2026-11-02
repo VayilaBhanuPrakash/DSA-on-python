@@ -21,7 +21,4 @@ class Solution:
             ans.append(left + right)
         return ans
 
-            
-        
-            
         
