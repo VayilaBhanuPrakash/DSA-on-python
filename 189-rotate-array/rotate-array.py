@@ -7,27 +7,21 @@ class Solution:
         left =  0
         right = len(nums) - 1
         while left < right:
-            temp = nums[left]
-            nums[left] = nums[right]
-            nums[right] = temp
+            nums[left], nums[right] = nums[right], nums[left]
             left += 1
             right -= 1
         
         left = 0
         right = k - 1
         while left < right:
-            temp = nums[left]
-            nums[left] = nums[right]
-            nums[right] = temp
+            nums[left], nums[right] = nums[right], nums[left]
             left += 1
             right -= 1
-            
+
         left = k
         right = len(nums) - 1
         while left < right:
-            temp = nums[left]
-            nums[left] = nums[right]
-            nums[right] = temp
+            nums[left], nums[right] = nums[right], nums[left]
             left += 1
             right -= 1
 
