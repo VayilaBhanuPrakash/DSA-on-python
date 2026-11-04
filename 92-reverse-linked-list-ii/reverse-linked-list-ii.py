@@ -8,9 +8,9 @@ class Solution:
         if not head or not head.next:
             return head
         
-
         dummy = ListNode(0)
         dummy.next = head
+        
         count = 0
         curr = head
         prev = dummy
@@ -36,4 +36,3 @@ class Solution:
         prev.next = second_half
         
         return dummy.next
-        
