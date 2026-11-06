@@ -1,7 +1,6 @@
 class NumArray:
 
     def __init__(self, nums: list[int]):
-        self.num = nums
         self.prefix = [0]
         summ = 0
         for ele in nums:
