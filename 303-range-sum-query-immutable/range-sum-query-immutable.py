@@ -1,11 +1,9 @@
 class NumArray:
 
     def __init__(self, nums: list[int]):
-        self.prefix = [0]
-        summ = 0
+        self.prefix = [0] 
         for ele in nums:
-            summ = summ + ele
-            self.prefix.append(summ)
+            self.prefix.append(ele + self.prefix[-1])
 
         
 
