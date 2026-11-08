@@ -16,4 +16,6 @@ class Solution:
                 if grid[i][j] == 1 and (rows[i] > 1 or cols[j] > 1):
                     res += 1
         return res
+
+
         
