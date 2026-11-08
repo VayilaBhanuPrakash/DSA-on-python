@@ -13,7 +13,7 @@ class Solution:
         res = 0
         for i in range(m):
             for j in range(n):
-                if rows[i] > 1 or cols[j] > 1:
-                    res += grid[i][j]
+                if grid[i][j] == 1 and (rows[i] > 1 or cols[j] > 1):
+                    res += 1
         return res
         
