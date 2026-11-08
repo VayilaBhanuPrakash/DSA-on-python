@@ -6,8 +6,9 @@ class Solution:
         cols = [0] * n
         for i in range(m):
             for j in range(n):
-                rows[i] += grid[i][j]
-                cols[j] += grid[i][j]
+                val = grid[i][j]
+                rows[i] += val
+                cols[j] += val
                 
         res = 0
         for i in range(m):
