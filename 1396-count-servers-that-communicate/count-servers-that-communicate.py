@@ -6,10 +6,9 @@ class Solution:
         cols = [0] * n
         for i in range(m):
             for j in range(n):
-                if grid[i][j] == 1:
-                    rows[i] += 1
-                    cols[j] += 1
-                    
+                rows[i] += grid[i][j]
+                cols[j] += grid[i][j]
+                
         res = 0
         for i in range(m):
             for j in range(n):
