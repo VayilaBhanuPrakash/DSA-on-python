@@ -9,12 +9,12 @@ class Solution:
             nonlocal res
             if count < 0 or count > n:
                 return
-            if len(par) == n*2:
+            if len(par) == 2 * n:
                 if count == 0:
                     res.append(par)
                 return
-            dfs(par+'(',count+1)
-            dfs(par+')',count-1)
-        dfs('(',1)
+            dfs(par + '(', count + 1)
+            dfs(par + ')', count - 1)
+        dfs('',0)
         return res
         
