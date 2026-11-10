@@ -11,19 +11,21 @@ class Solution:
             first = i
             last = i
             while first >= 0 and last < n and s[first] == s[last]:
-                if last - first > end - start:
+                if end - start < last - first:
                     start = first
                     end = last
                 first -= 1
                 last += 1
-
             first = i
             last = i + 1
             while first >= 0 and last < n and s[first] == s[last]:
-                if last - first > end - start:
+                if end - start < last - first:
                     start = first
                     end = last
                 first -= 1
                 last += 1
         return s[start : end + 1]
+                
+
+
         
