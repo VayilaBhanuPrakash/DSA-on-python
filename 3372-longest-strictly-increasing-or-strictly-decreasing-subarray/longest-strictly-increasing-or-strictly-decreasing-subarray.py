@@ -3,7 +3,6 @@ class Solution:
         res = 1
         count1 = 1
         count2 = 1
-        num = nums[0]
         for i in range(1,len(nums)):
             if nums[i - 1] < nums[i]:
                 count1 += 1
@@ -14,7 +13,6 @@ class Solution:
             else:
                 count1 = 1
                 count2 = 1
-            num = nums[i]
             res = max(res,count1,count2)
         return res
         
