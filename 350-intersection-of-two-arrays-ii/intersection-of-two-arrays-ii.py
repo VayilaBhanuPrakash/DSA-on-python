@@ -16,8 +16,7 @@ class Solution:
         for keys in h1.keys():
             if keys in h2:
                 minn=min(h1[keys],h2[keys])
-                for i in range(minn):
-                    res.append(keys)
+                res.extend([keys] * minn)
         return res
             
         
