@@ -1,9 +1,9 @@
 class Solution:
     def minimumSumSubarray(self, nums: List[int], l: int, r: int) -> int:
         psum = [0] * (len(nums) + 1) 
-
         for i in range(len(nums)):
             psum[i + 1] = psum[i] + nums[i]
+
         res = float('inf')
         flag = 0
         for i in range(len(nums) - l + 1):
