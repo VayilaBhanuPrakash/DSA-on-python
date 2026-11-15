@@ -17,3 +17,7 @@ class Solution:
                 n = n >> 1
                 base = base * base
             return res
+
+
+        
+        
