@@ -9,5 +9,4 @@ class Solution:
             res.extend(res1)
         result = [list(i) for i in set(tuple(x) for x in res)]
         #res.sort()
-        return result
-        
+        return result        
