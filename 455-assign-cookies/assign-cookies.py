@@ -5,7 +5,9 @@ class Solution:
         i = 0
         j = 0
         res = 0
-        while i < len(g) and j < len(s):
+        n = len(g)
+        m = len(s)
+        while i < n and j < m:
             if s[j] >= g[i]:
                 res += 1
                 i += 1
