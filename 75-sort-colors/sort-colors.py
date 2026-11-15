@@ -1,5 +1,5 @@
 class Solution:
-    def sortColors(self, nums: list[int]) -> None:
+    def sortColors(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -16,4 +16,8 @@ class Solution:
                 end -= 1
             else:
                 i += 1
+
+        
+    
+
         
