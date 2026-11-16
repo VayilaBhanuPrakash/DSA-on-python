@@ -14,7 +14,6 @@ class Solution:
                     temp += chr(last + 48)
                     value = value // 10
                 new = new + temp[::-1]
-                print(new)
             s = new
         return s
         
