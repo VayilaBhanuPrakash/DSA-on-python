@@ -10,12 +10,8 @@ class Solution:
             sett.add(s[j])
             res = max(res, j - i + 1)
         return res
-
-
-
-
         
-            
 
-            
+
+
         
