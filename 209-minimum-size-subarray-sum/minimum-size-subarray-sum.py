@@ -9,15 +9,11 @@ class Solution:
         while right < len(nums):
             summ += nums[right]
             
-            if summ >= target:
+            while summ >= target:
+                summ -= nums[left]
                 res = min(res, right - left + 1)
-                right += 1
-                while summ >= target:
-                    summ -= nums[left]
-                    left += 1
-                    res = min(res, right - left + 1)
-            else:
-                right += 1
+                left += 1
+            right += 1
                     
         if res > len(nums):
             return 0
