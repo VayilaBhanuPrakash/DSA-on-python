@@ -13,7 +13,7 @@ class Solution:
             
             maxx = max(maxx,h[s[right]])
 
-            if right - left + 1 - maxx > k:
+            if (right - left + 1) - maxx > k:
                 h[s[left]] -= 1
                 left += 1
             res = max(res,right - left + 1)
