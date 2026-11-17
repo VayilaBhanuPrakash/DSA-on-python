@@ -6,7 +6,7 @@ class Solution:
         right = 1
         if summ >= target:
             return 1
-        while left < right and right < len(nums):
+        while right < len(nums):
             summ += nums[right]
             
             if summ >= target:
