@@ -14,9 +14,6 @@ class Solution:
                                 count -=1
                             i += 1
                             
-                else:
-                    if count <= k:
-                        res = max(res, j - i + 1)
             if count <= k:
                 res = max(res, j - i + 1)
             
