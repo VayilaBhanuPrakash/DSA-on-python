@@ -15,6 +15,7 @@ class Solution:
                 if h2[s2[i]] == 0:
                     h2.pop(s2[i])
                 i += 1
+                
             if s2[j] not in h2:
                 h2[s2[j]] = 1
             else:
@@ -24,5 +25,4 @@ class Solution:
                 return True
 
         return False
-
         
