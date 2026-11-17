@@ -1,22 +1,20 @@
 class Solution:
     def minSubArrayLen(self, target: int, nums: list[int]) -> int:
-        res = len(nums) + 1
-        summ = nums[0]
+        n = len(nums)
+        res = n + 1
+        summ = 0
         left = 0
-        right = 1
-        if summ >= target:
-            return 1
-        while right < len(nums):
+
+        for right in range(n):
             summ += nums[right]
             
             while summ >= target:
-                summ -= nums[left]
                 res = min(res, right - left + 1)
+                if res == 1:
+                    return 1
+                summ -= nums[left]
                 left += 1
-            right += 1
-                    
-        if res > len(nums):
-            return 0
-        return res
+                 
+        return 0 if res > n else res
 
         
