@@ -16,6 +16,4 @@ class Solution:
         if goal == 0:
             return AtMost(nums, goal)
         return AtMost(nums, goal) - AtMost(nums, goal - 1)
-
-
         
