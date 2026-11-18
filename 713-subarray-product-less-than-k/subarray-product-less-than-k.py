@@ -13,7 +13,6 @@ class Solution:
                     i += 1
                 if product < k:
                     res = res + j - i + 1
-            print(res)
         return res
 
 
