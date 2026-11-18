@@ -1,5 +1,5 @@
 class Solution:
-    def longestSubarray(self, nums: list[int]) -> int:
+    def longestSubarray(self, nums: List[int]) -> int:
         res = 0
         i = 0
         count = 0
@@ -12,4 +12,8 @@ class Solution:
                 i += 1
             res = max(res, j - i)
         return res
+
+
+            
+
         
