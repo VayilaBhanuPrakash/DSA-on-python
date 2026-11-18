@@ -14,4 +14,7 @@ class Solution:
             res = max(res, len(nums) - h[prefix] - 1)
 
         return res
+            
+
+
         
