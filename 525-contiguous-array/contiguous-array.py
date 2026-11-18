@@ -10,8 +10,6 @@ class Solution:
                 h[prefix] = i
             else:
                 res = max(res,i - h[prefix])
-        if prefix in h:
-            res = max(res, len(nums) - h[prefix] - 1)
 
         return res
             
