@@ -11,7 +11,4 @@ class Solution:
             if product < k:
                 res = res + j - i + 1
         return res
-
-
-
         
