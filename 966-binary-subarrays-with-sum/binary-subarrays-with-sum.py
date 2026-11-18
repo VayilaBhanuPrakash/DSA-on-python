@@ -1,19 +1,20 @@
 class Solution:
     def numSubarraysWithSum(self, nums: list[int], goal: int) -> int:
-        def AtMost(nums, k):
-            res = 0
-            i = 0
-            summ = 0
-            for j in range(len(nums)):
-                summ += nums[j]
+        h = {0 : 1}
+        prefix_sum = 0
+        res  = 0
+        for ele in nums:
+            prefix_sum += ele
+            required = prefix_sum - goal
 
-                while summ > k:
-                    summ -= nums[i]
-                    i += 1
-                
-                res += j - i + 1
-            return res
-        if goal == 0:
-            return AtMost(nums, goal)
-        return AtMost(nums, goal) - AtMost(nums, goal - 1)
+            if required in h:
+                res += h[required]
+            
+            h[prefix_sum] = h.get(prefix_sum, 0) + 1
+
+        return res
+
+
+
+
         
