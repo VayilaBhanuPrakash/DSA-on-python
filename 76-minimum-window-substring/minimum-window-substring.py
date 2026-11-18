@@ -25,8 +25,8 @@ class Solution:
                     h2[s[j]] += 1
 
             while i < len(s) and valid(h1,h2):
-                if len(s[i : j + 1]) < minn:
-                    minn = len(s[i : j + 1])
+                if j - i +  1 < minn:
+                    minn = j - i + 1
                     res = s[i : j + 1]
                 if s[i] in h2:
                     h2[s[i]] -= 1
