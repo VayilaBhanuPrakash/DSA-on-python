@@ -13,6 +13,4 @@ class Solution:
                 i += 1
             res = max(res,j - i + 1)
         return res
-
-            
-
+        
