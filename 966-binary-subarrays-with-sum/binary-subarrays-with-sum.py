@@ -13,8 +13,4 @@ class Solution:
             h[prefix_sum] = h.get(prefix_sum, 0) + 1
 
         return res
-
-
-
-
         
