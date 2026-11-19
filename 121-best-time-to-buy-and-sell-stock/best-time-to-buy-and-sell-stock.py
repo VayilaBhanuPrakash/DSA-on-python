@@ -3,7 +3,6 @@ class Solution:
         buy = prices[0]
         res = 0
         for ele in prices:
-            res = max(res, ele - buy)
             if ele < buy:
                 buy = ele
             else:
