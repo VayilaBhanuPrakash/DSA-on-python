@@ -2,20 +2,21 @@ class Solution:
     def minimizeSum(self, nums: List[int]) -> int:
         if len(nums) == 3:
             return 0
-        first = min(nums)
-        last = max(nums)
-        nums.remove(first)
-        nums.remove(last)
-        second = min(nums)
-        second_last = max(nums)
-        nums.remove(second)
-        nums.remove(second_last)
-        if not nums:
-            third = second_last
-            third_last = second
-        else:
-            third = min(nums)
-            third_last = max(nums)
+        first = second = third = float('inf')   
+        last = second_last = third_last = float('-inf')  
+        for ele in nums:
+            if ele < first:
+                first, second, third = ele, first, second
+            elif ele < second: 
+                second, third = ele, second
+            elif ele < third: 
+                third = ele
+            if ele > last:
+                last, second_last, third_last = ele, last, second_last
+            elif ele > second_last: 
+                second_last, third_last = ele, second_last
+            elif ele > third_last: 
+                third_last = ele
         
         return min(last - third, third_last - first, second_last - second)
 
