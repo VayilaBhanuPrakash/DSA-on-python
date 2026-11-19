@@ -4,7 +4,10 @@ class Solution:
         res = 0
         for ele in prices:
             res = max(res, ele - buy)
-            buy = min(buy, ele)
+            if ele < buy:
+                buy = ele
+            else:
+                res = max(res, ele - buy)
         return res
 
 
