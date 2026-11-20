@@ -14,10 +14,12 @@ class Solution:
 
         start = 1
         end = max(piles)
+        res = end
         while start <= end:
             mid = start + (end - start) // 2
             if CanEat(piles, mid):
+                res = mid
                 end = mid - 1
             else:
                 start = mid + 1
-        return start
+        return res
