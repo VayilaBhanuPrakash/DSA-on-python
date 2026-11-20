@@ -1,4 +1,4 @@
-class Solution:    
+class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         def valid_row(matrix,target):
             rows = len(matrix)
@@ -35,18 +35,4 @@ class Solution:
         row = valid_row(matrix,target)
 
         return row_search(matrix[row],target)
-        
-
-        
-
-        
-
-
-        
-
-
-
-
-
-
-        
+            
