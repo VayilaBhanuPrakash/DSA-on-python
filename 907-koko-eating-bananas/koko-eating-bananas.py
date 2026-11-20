@@ -1,24 +1,23 @@
 class Solution:
     def minEatingSpeed(self, piles: list[int], h: int) -> int:
-        def canEat(mid,h):
-            hours = 0
+
+        def CanEat(piles, mid):
+            time = 0
             for ele in piles:
                 if ele % mid == 0:
-                    hours += ele // mid
+                    time += ele // mid
                 else:
-                    hours += ele // mid + 1
-            if hours > h:
-                return False
-            return True
+                    time += ele // mid + 1
+            if time <= h:
+                return True
+            return False
 
-        i = 1
-        j = max(piles)
-        while i <= j:
-            mid = (i + j) // 2
-            
-            if canEat(mid,h):
-                j = mid - 1
+        start = 1
+        end = max(piles)
+        while start <= end:
+            mid = start + (end - start) // 2
+            if CanEat(piles, mid):
+                end = mid - 1
             else:
-                i = mid + 1
-        return i
-        
+                start = mid + 1
+        return start
