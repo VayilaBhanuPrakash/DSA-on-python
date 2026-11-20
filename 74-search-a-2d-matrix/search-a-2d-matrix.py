@@ -1,10 +1,5 @@
 class Solution:    
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        rows = len(matrix)
-        cols = len(matrix[0])
-        left = 0
-        right = rows
-        valid_row = -1
         def valid_row(matrix,target):
             rows = len(matrix)
             cols = len(matrix[0])
