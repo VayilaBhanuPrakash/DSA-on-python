@@ -16,7 +16,7 @@ class Solution:
                     count = 0
             return buckets >= m
 
-        left = 1
+        left = min(bloomDay)
         right = max(bloomDay)
         res = -1
         while left <= right:
