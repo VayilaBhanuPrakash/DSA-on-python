@@ -23,9 +23,5 @@ class Solution:
                 else:
                     k -= 1
         return l
-                
-                
-
-
 
         
