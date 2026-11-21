@@ -26,4 +26,7 @@ class Solution:
                 res = mid
                 right = mid - 1
         return res
+
+
+
         
