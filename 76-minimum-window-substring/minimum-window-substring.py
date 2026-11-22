@@ -12,26 +12,26 @@ class Solution:
 
         for right in range(len(s)):
 
-            sMap[s[right]] = sMap.get(s[right], 0) + 1
-
-            if s[right] in tMap and sMap[s[right]] <= tMap[s[right]]:
-                count -= 1
+            if s[right] in tMap:
+                if tMap[s[right]] > 0:
+                    count -= 1
+                tMap[s[right]] -= 1
             
             while count == 0:
                 if right - left + 1 < minLen:
                     minLen = right - left + 1
                     res = s[left : right + 1]
-            
-                sMap[s[left]] -= 1
 
-                if s[left] in tMap and sMap[s[left]] < tMap[s[left]]:
-                    count += 1
+                if s[left] in tMap:
+                    tMap[s[left]] += 1
+                    if tMap[s[left]] > 0:
+                        count += 1
 
                 left += 1
         return res
 
+            
 
-
-
+        
         
         
