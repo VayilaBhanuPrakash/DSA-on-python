@@ -4,12 +4,21 @@ class Solution:
         for ele in s:
             if ele.isalnum():
                 st = st + ele.lower()
-        i = 0
-        j = len(st) - 1
-        while i < j:
-            if st[i] != st[j]:
+        left = 0
+        right = len(s) - 1
+        while left < right:
+            if not s[left].isalnum():
+                left += 1
+                continue
+            if not s[right].isalnum():
+                right -= 1
+                continue
+            if s[left].lower() != s[right].lower():
+                print(s[left],s[right])
                 return False
-            i += 1
-            j -= 1
+                
+
+            left += 1
+            right -= 1
         return True
         
