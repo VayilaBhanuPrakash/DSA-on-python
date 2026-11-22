@@ -4,8 +4,6 @@ class Solution:
         left = 0
         res = n + 1
         summ = 0
-        if max(nums) >= target:
-            return 1
         for right in range(n):
             summ += nums[right]
             while summ >= target:
