@@ -1,22 +1,32 @@
 class Solution:
     def findAnagrams(self, s: str, p: str) -> list[int]:
-        h1 = {chr(i + 97) : 0 for i in range(26)}
-        for ele in p:
-            h1[ele] += 1
-
-        h2 = {chr(i + 97) : 0 for i in range(26)}
-        n = len(p)
-        i = 0
         res = []
-        for j in range(len(s)):
-            if j - i + 1 > n:
-                h2[s[i]] -= 1
-                i += 1
-                
-            h2[s[j]] += 1
+        if len(s) < len(p):
+            return res
 
-            if h1 == h2:
-                res.append(i)
+        pmap = {}
+        for ele in p:
+            pmap[ele] = pmap.get(ele, 0) + 1
 
+        left = 0
+        count = len(p)
+
+        for right in range(len(s)):
+            if s[right] not in pmap:
+                pmap[s[right]] = -1
+            if pmap[s[right]] > 0:
+                count -= 1
+            pmap[s[right]] -= 1
+
+            if right - left + 1 > len(p):
+                if pmap[s[left]] >= 0:
+                    count += 1
+                pmap[s[left]] += 1
+                left += 1
+            if count == 0:
+                res.append(left)
         return res
+
+
+        
         
