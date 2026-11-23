@@ -3,50 +3,52 @@ class Solution:
     def findSubstring(self, s: str, words: List[str]) -> List[int]: 
         n = len(s)
         wordLen = len(words[0])
-        count = len(words)
+        count1 = len(words)
 
-        if n < wordLen * count:
+        if n < wordLen * count1:
             return []
-        
-        h = {}
+
+        h1 = {}
         for word in words:
-            h[word] = h.get(word, 0) + 1
+            h1[word] = h1.get(word, 0) + 1
         
         res = []
 
-        for start in range(wordLen):
-            first = start
-            index = start
-            h1 = {}
-            count1 = 0
+        for begin in range(wordLen):
+            start = begin
+            index = begin
+            h2 = {}
+            count2 = 0
 
-            while first + wordLen <= n:
-                st = s[first : first + wordLen]
-                first += wordLen
+            while start + wordLen <= n:
+                st = s[start : start + wordLen]
+                start += wordLen
 
-                if st not in h:
-                    index  = first
-                    h1 = {}
-                    count1 = 0
+                if st not in h1:
+                    h2 = {}
+                    count2 = 0
+                    index = start
                     continue
                 
-                h1[st] = h1.get(st, 0) + 1
-                count1 += 1
+                h2[st] = h2.get(st, 0) + 1
+                count2 += 1
 
-                while h1[st] > h[st]:
-                    left_word = s[index : index + wordLen]
-                    h1[left_word] -= 1
-                    count1 -= 1
+                while h2[st] > h1[st]:
+                    leftWord = s[index : index + wordLen]
+                    h2[leftWord] -= 1
+                    count2 -= 1
                     index += wordLen
                 
-                while count1 == count:
+                while count1 == count2:
                     res.append(index)
 
-                    left_word = s[index : index + wordLen]
-                    h1[left_word] -= 1
-                    count1 -= 1
+                    leftWord = s[index : index + wordLen]
+                    h2[leftWord] -= 1
+                    count2 -= 1
                     index += wordLen
         return res
+
+        
         
 
         
