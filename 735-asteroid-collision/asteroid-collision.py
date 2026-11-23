@@ -1,44 +1,15 @@
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
-        n=len(asteroids)
-        l=[]
-        i=0
-        while i<n:
-            if len(l)==0:
-                l.append(asteroids[i])
-                i+=1
+        stack = []
+        for i in range(len(asteroids)):
+            while stack and stack[-1] > 0 and asteroids[i] < 0 and stack[-1] < -asteroids[i]:
+                stack.pop()
+            
+            if stack and stack[-1] > 0 and asteroids[i] < 0:
+                if stack[-1] == -asteroids[i]:
+                    stack.pop()
             else:
-                while i<n and len(l) and asteroids[i]>0 and l[-1]>0:
-                    l.append(asteroids[i])
-                    i+=1
-                while i<n and len(l) and asteroids[i]<0 and l[-1]<0:
-                    l.append(asteroids[i])
-                    i+=1
-                while i<n and len(l) and asteroids[i]>0 and l[-1]<0:
-                    """if asteroids[i]>-l[-1]:
-                        pass
-                        #l.append(asteroids[i])
-                        #i+=1
-                    elif asteroids[i]<-l[-1]:
-                        l.append(asteroids[i])
-                        i+=1
-                    else:
-                        l.append(asteroids[i])
-                        i+=1"""
-                    l.append(asteroids[i])
-                    i+=1
-                while i<n and  len(l) and asteroids[i]<0 and l[-1]>0:
-                    if -asteroids[i]>l[-1]:
-                        l.pop()
-                        #l.append(asteroids[i])
-                        #i+=1
-                    elif -asteroids[i]<l[-1]:
-                        i+=1
-                    else:
-                        l.pop()
-                        i+=1
-        return l
-
-
-
+                stack.append(asteroids[i])
+        return stack
+        
         
