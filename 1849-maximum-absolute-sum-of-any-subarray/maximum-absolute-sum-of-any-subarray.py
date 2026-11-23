@@ -1,16 +1,17 @@
 class Solution:
     def maxAbsoluteSum(self, nums: List[int]) -> int:
         psum = float('-inf')
-        positive_sum = float('-inf')
-        for ele in nums:
-            psum = max(psum + ele, ele)
-            positive_sum = max(positive_sum, psum)
-
-        nsum = float('inf')
-        negative_sum = float('inf')
-        for ele in nums:
-            nsum = min(nsum + ele, ele)
-            negative_sum = min(negative_sum, nsum)
+        prefix = 0
+        for i in range(len(nums)):
+            prefix = max(prefix + nums[i], nums[i])
+            psum = max(psum,prefix)
         
-        return max(positive_sum, -negative_sum)
+        nsum = float('inf')
+        prefix = 0
+        for i in range(len(nums)):
+            prefix = min(prefix + nums[i], nums[i])
+            nsum = min(nsum, prefix)
+        
+        return max(psum, -nsum)
+
         
