@@ -1,9 +1,9 @@
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
         n = len(temperatures)
-
         res = [0] * n
         stack = [n - 1]
+        
         for i in range(n - 2, -1, -1):
             while stack and temperatures[stack[-1]] <= temperatures[i]:
                 stack.pop()
