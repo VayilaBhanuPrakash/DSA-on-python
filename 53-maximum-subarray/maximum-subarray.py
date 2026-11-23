@@ -3,7 +3,6 @@ class Solution:
         maxx = float('-inf')
         prefix = 0
         for i in range(len(nums)):
-            prefix += nums[i]
-            prefix = max(prefix,nums[i])
+            prefix = max(prefix + nums[i],nums[i])
             maxx = max(maxx,prefix)
         return maxx
