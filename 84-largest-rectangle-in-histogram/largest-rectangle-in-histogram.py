@@ -20,6 +20,6 @@ class Solution:
             height = width * heights[i]
             max_height = max(height, max_height)
             stack.append(i)
-            print(max_height)
+
         return max_height
         
