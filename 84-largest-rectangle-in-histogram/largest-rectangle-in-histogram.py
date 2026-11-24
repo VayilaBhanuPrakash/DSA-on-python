@@ -6,10 +6,10 @@ class Solution:
 
         for i in range(len(heights)):
             while stack and heights[stack[-1]] > heights[i]:
-                h = heights[stack.pop()]
+                height = heights[stack.pop()]
                 width = i if not stack else i - stack[-1] + 1 - 2
 
-                area = h * width
+                area = height * width
                 max_area = max(area, max_area)
 
 
