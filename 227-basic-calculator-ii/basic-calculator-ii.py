@@ -23,11 +23,4 @@ class Solution:
                 num = 0
                 op = ch
         return sum(stack)
-            
-
-
-        
-            
-
-            
         
