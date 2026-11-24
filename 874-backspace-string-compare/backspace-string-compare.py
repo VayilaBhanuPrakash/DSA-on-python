@@ -1,6 +1,5 @@
 class Solution:
     def backspaceCompare(self, s: str, t: str) -> bool:
-        
         def process(st):
             stack = []
             for ele in st:
@@ -13,5 +12,5 @@ class Solution:
         
         return process(s) == process(t)
 
-
+        
         
