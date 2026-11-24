@@ -2,11 +2,11 @@ class Solution:
     def maximalRectangle(self, matrix: list[list[str]]) -> int:
 
         def maxArea(arr):
-            arr.append(0)
             stack = []
             maximum = 0
-            for i in range(len(arr)):
-                while stack and arr[stack[-1]] > arr[i]:
+            for i in range(len(arr) + 1):
+                h = 0 if i == len(arr) else arr[i]
+                while stack and arr[stack[-1]] > h:
                     height = arr[stack.pop()]
                     width = i if not stack else i - stack[-1] + 1 - 2
                     area = height * width
