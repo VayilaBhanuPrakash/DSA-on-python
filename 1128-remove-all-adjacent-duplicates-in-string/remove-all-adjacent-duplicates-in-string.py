@@ -7,4 +7,5 @@ class Solution:
             else:
                 stack.append(ele)
         return "".join(stack)
+
         
