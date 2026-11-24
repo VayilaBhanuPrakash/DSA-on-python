@@ -1,6 +1,5 @@
 class Solution:
     def maximalRectangle(self, matrix: list[list[str]]) -> int:
-
         def maxArea(arr):
             maximum = 0
             stack = []
@@ -29,19 +28,4 @@ class Solution:
             max_area = max(max_area, maxArea(heights))
         
         return max_area
-
-            
-
-       
-
-
-
-                
-
-
-        
-
-
-                
-
         
