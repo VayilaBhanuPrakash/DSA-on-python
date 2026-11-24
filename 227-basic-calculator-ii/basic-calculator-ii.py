@@ -33,11 +33,4 @@ class Solution:
             res = res + nums[i + 1] if op[i] == "+" else res - nums[i + 1]
         
         return res
-            
-
-
-        
-            
-
-            
         
