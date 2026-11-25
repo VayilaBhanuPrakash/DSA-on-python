@@ -1,20 +1,18 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        open = []
-        close = []
+        open = 0
+        close = 0
         for i in range(len(s)):
             if s[i] == "(":
-                open.append(i)
+                open += 1
             elif s[i] == ")":
                 if open:
-                    open.pop()
+                    open -= 1
                 else:
-                    close.append(i)
+                    close += 1
         
-        stack = []
-        for i in range(len(s)):
-            if i not in open and i not in close:
-                stack.append(s[i])
+        s = s.replace(")","",close)
+        s = s.rsplit("(",open)
         
-        return "".join(stack)
+        return "".join(s)
         
