@@ -3,11 +3,10 @@ class MyStack:
 
     def __init__(self):
         self.queue1 = deque()
-        self.queue2  = deque()
+        self.queue2 = deque() 
 
     def push(self, x: int) -> None:
-        self.queue1.append(x)
-    
+        self.queue1.append(x)        
 
     def pop(self) -> int:
         while len(self.queue1) > 1:
@@ -16,7 +15,6 @@ class MyStack:
         self.queue1 = self.queue2
         self.queue2 = deque()
         return val
-        
 
     def top(self) -> int:
         while len(self.queue1) > 1:
@@ -26,6 +24,7 @@ class MyStack:
         self.queue1 = self.queue2
         self.queue2 = deque()
         return val
+
     def empty(self) -> bool:
         return not self.queue1
         
