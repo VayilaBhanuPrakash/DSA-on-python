@@ -3,8 +3,8 @@ class Solution:
         open = 0
         close = 0
         max_len = 0
-        for ele in s: 
-            if ele == "(":
+        for i in range(len(s)): 
+            if s[i] == "(":
                 open += 1
             else:
                 close += 1
@@ -16,8 +16,8 @@ class Solution:
                 close = 0
         open = 0
         close = 0
-        for ele in reversed(s):
-            if ele == "(":
+        for i in range(len(s) -1, -1, -1):
+            if s[i] == "(":
                 close += 1
             else:
                 open += 1
