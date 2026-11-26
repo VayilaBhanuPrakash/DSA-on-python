@@ -1,12 +1,16 @@
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
-        l = [[0] * n for _ in range(m)]
-        for j in range(n):
-            l[m-1][j] = 1
-        for i in range(m):
-            l[i][n-1] = 1
-        for i in range(m-1-1,-1,-1):
-            for j in range(n-1-1,-1,-1):
-                l[i][j] = l[i+1][j] + l[i][j+1]
-        return l[0][0]
+        dp = [[0] * n for _ in range(m)]
+        def countPaths(m, n, dp):
+            if m == 0 or n == 0:
+                return 1
+            if dp[m][n]:
+                return dp[m][n]
+        
+            dp[m][n] = countPaths(m - 1, n, dp) + countPaths(m, n - 1, dp)
+            return dp[m][n]
+        
+        return countPaths(m - 1, n - 1, dp)
+    
+        
         
