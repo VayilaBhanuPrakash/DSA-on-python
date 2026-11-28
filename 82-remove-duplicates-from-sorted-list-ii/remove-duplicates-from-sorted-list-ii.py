@@ -25,8 +25,3 @@ class Solution:
                 prev = prev.next
         return dummy.next
 
-        
-
-        
-
-        
