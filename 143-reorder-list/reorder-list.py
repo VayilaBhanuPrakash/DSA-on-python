@@ -4,22 +4,31 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def reorderList(self, head: ListNode | None) -> None:
+    def reorderList(self, head: Optional[ListNode]) -> None:
         """
         Do not return anything, modify head in-place instead.
         """
+        if not head.next or not head.next.next:
+            return
+        
         l = []
-        temp = head
-        while temp:
-            l.append(temp)
-            temp = temp.next
-        temp = head
-        for i in range(len(l)//2):
-            after = temp.next
-            temp.next = l.pop()
-            temp = temp.next
-            temp.next = after
-            temp = temp.next
-        temp.next = None
-    
+        curr = head
+        while curr:
+            l.append(curr)
+            curr = curr.next
+        
+        i = 0
+        j = len(l) - 1
+        while i < j:
+            l[i].next = l[j]
+            i += 1
+            if i == j:
+                break
+            l[j].next = l[i]
+            j -= 1
+        l[i].next = None
+        
+        
+
+
         
