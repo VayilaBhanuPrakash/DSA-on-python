@@ -8,25 +8,40 @@ class Solution:
         """
         Do not return anything, modify head in-place instead.
         """
-        if not head.next or not head.next.next:
-            return
+        if not head or not head.next:
+            return 
+        slow = head
+        fast = head
+        while fast and fast.next and fast.next.next:
+            slow = slow.next
+            fast = fast.next.next
         
-        l = []
-        curr = head
+        second = slow.next
+        slow.next = None
+
+        prev = None
+        curr = second
         while curr:
-            l.append(curr)
-            curr = curr.next
+            after = curr.next
+            curr.next = prev
+            prev = curr
+            curr = after
+        second = prev
+        first = head
+        while second:
+            next1 = first.next
+            next2 = second.next
+            first.next = second
+            second.next = next1
+            first = next1
+            second = next2
+    
         
-        i = 0
-        j = len(l) - 1
-        while i < j:
-            l[i].next = l[j]
-            i += 1
-            if i == j:
-                break
-            l[j].next = l[i]
-            j -= 1
-        l[i].next = None
+
+
+        
+
+        
         
         
 
