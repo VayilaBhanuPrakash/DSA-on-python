@@ -10,6 +10,7 @@ class Solution:
 
         prevgroup = dummy
         curr = prevgroup.next
+
         while True:
             kth = prevgroup
             for i in range(k):
@@ -18,9 +19,9 @@ class Solution:
             if not kth:
                 break
             
-            curr = prevgroup.next
             nextgroup = kth.next
             prev = nextgroup
+            curr = prevgroup.next
             while curr != nextgroup:
                 after = curr.next
                 curr.next = prev
@@ -29,12 +30,6 @@ class Solution:
             
             temp = prevgroup.next
             prevgroup.next = kth
-            temp.next = nextgroup
             prevgroup = temp
-        
         return dummy.next
-
-
-    
-        
         
