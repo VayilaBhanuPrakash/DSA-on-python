@@ -29,4 +29,4 @@ class Solution:
             curr = curr.next
         prev.next = None
         return head
-
+        
